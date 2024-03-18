@@ -1,8 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 // The below statement parses each incoming request & make the req body accessible to backend
 app.use(bodyParser.json());
