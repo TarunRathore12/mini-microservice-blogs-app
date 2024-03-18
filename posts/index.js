@@ -1,11 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
+const cors = require('cors');
 
 const app = express();
 
 // Initially storing data on run time
 const posts = {};
+
+// Handled cors issue which blocks frontend to access backend
+app.use(cors());
 
 // The below statement parses each incoming request & make the req body accessible to backend
 app.use(bodyParser.json());
