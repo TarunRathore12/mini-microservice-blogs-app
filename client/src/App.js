@@ -1,10 +1,16 @@
-import PostCreate from "./PostCreate"
+import PostCreate from "./PostCreate";
+import PostList from "./PostList";
 
 const App = () => {
   return (
     <div className="container">
       <h1>Create Posts</h1>
       <PostCreate />
+      <hr />
+      <div>
+        <h1>Posts</h1>
+        <PostList />
+      </div>
     </div>
   )
 }
